@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063a9a86cc9784294ab9defe2d7a8c00, type: 3}
+  m_Name: My Guess
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Someone, probably with ties to the ancient ways, is using magic in dark ways...
+  - My guess would be either spirit or highly spiritual creature.
+  responses:
+  - responseText: Why are you here?
+    dialogueObject: {fileID: 11400000, guid: 1183c311b4cdc4b63b308dfff4171ed5, type: 2}
+    actionResponse: 
+  - responseText: Who are you?
+    dialogueObject: {fileID: 11400000, guid: fa3c05431501c40d79c6bd497b0068cb, type: 2}
+    actionResponse: Pliney
+  - responseText: Thanks. Bye.
+    dialogueObject: {fileID: 11400000, guid: f8a0706a5799d421abe27d02b68dfe78, type: 2}
+    actionResponse: Wait

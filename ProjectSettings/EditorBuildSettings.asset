@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start_Screen.unity
+    guid: bbfe53c04810d49cf84f5f8420e334db
+  - enabled: 1
+    path: Assets/Scenes/Intro_Scene.unity
+    guid: f91fd0a4843b14a768c25ed7f97f428d
+  - enabled: 1
+    path: Assets/Scenes/Level_One_Second.unity
+    guid: ac78852ed0012403bb3a5c080ccbea2a
+  - enabled: 1
+    path: Assets/Scenes/Level_Two.unity
+    guid: 03aabc90d3525437aa38095b8ef41318
+  - enabled: 1
+    path: Assets/Scenes/Level_Two_P1.unity
+    guid: f013971ef494d46ba9eb28868edd195a
+  - enabled: 1
+    path: Assets/Scenes/Boss_One.unity
+    guid: eebf18b6992e84ffc99858c8037d4bf1
+  - enabled: 1
+    path: Assets/Scenes/Boss_Two.unity
+    guid: 9616b7eb25c9448649533ea8b12f582c
+  - enabled: 1
+    path: Assets/Scenes/Boss_Two_Second.unity
+    guid: 4c0fc5ff184b14a9d8b90754742a2ab6
+  - enabled: 1
+    path: Assets/Scenes/Outro_Scene.unity
+    guid: 57b555fa8217e4bc38d09a1cd0760c9c
+  - enabled: 1
+    path: Assets/Scenes/Credits_Screen.unity
+    guid: 535302726b7b04e25a08f711782a1571
+  - enabled: 1
+    path: Assets/Scenes/Rolling_Credits.unity
+    guid: ef5d8867b82b44009a91de360859d32e
+  m_configObjects: {}

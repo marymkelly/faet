@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Health
+  - Enemy
+  - Death
+  - Flora
+  - Nurse
+  - Moss
+  - Bark
+  - Hazard
+  - Attack
+  - Save
+  - Sign
+  - Floor
+  - Boss
+  - Message
+  - Vine
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Climb
+  - Breakaway
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2187637799
+    locked: 0
+  - name: Platforms
+    uniqueID: 2860582677
+    locked: 0
+  - name: Gameplay
+    uniqueID: 2427935841
+    locked: 0
+  - name: Foreground
+    uniqueID: 2894324245
+    locked: 0

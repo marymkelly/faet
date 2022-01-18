@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5448488498521156503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5448488498521156501}
+  - component: {fileID: 5448488498521156502}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5448488498521156501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448488498521156503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5448488498521156502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448488498521156503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71562d143b6e24bfc838e9adf7367816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: PlayerCastMagic
+    clip: {fileID: 8300000, guid: da0b98ebb7f3f456eb42cebfdcb1c194, type: 3}
+    volume: 0.08
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: HauntedTheme
+    clip: {fileID: 8300000, guid: 2cbe4ebce09b940e785ab23a921f4173, type: 3}
+    volume: 0.03
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Hazard
+    clip: {fileID: 8300000, guid: 10948826e1ba146e58b1ce01b1077817, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Respawn
+    clip: {fileID: 8300000, guid: 060c0ed75ceb04e18b62af54fb5c560f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SelectionError
+    clip: {fileID: 8300000, guid: 1fe8a863092764390a51af4bb0052b0b, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: HealthRestored
+    clip: {fileID: 8300000, guid: 3d70b7912bfcc4d768c19553c60d5d2c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Collectable
+    clip: {fileID: 8300000, guid: 20d253f0a7094498baa408d767d02104, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: MagicLevel
+    clip: {fileID: 8300000, guid: 8ec3c1f7d9d65447ebe6e39786f8db47, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: EnemyDefeat
+    clip: {fileID: 8300000, guid: 980f1a7f72ed947c79a37a5e960e3185, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 419fc3c1e3cdf41ca87dc124296acd04, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: HomeTheme
+    clip: {fileID: 8300000, guid: a6294b9d49bfb47d4a6e3f51137b1c44, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: QuirkyTheme
+    clip: {fileID: 8300000, guid: e3c434d5219384fdfaaef276bb067d6d, type: 3}
+    volume: 0.03
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Fell
+    clip: {fileID: 8300000, guid: 746d5118334604359b216642270b8b43, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: BossDefeat
+    clip: {fileID: 8300000, guid: dabaa3a18000a4c70945631fee614e00, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: BossOneTheme
+    clip: {fileID: 8300000, guid: e3ba214c19e63486182a58f1a9f11d9f, type: 3}
+    volume: 0.02
+    pitch: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}
+  - name: BossTwoTheme
+    clip: {fileID: 8300000, guid: f88b92d83968948748ac4da3d4f1cbff, type: 3}
+    volume: 0.02
+    pitch: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}
+  - name: LoseSound
+    clip: {fileID: 8300000, guid: ded0186d136524159992398f495a831f, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: BossTwoDefeatTheme
+    clip: {fileID: 8300000, guid: 5d78dc946471c4dbcbf6193da6d85e9c, type: 3}
+    volume: 0.03
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063a9a86cc9784294ab9defe2d7a8c00, type: 3}
+  m_Name: Impy
+  m_EditorClassIdentifier: 
+  dialogue:
+  - 'Hey! Watch it!
+
+'
+  responses:
+  - responseText: I'm sorry, I didn't see you there.
+    dialogueObject: {fileID: 11400000, guid: a818c3d83171e4655b631ea842fed56b, type: 2}
+  - responseText: Who said that?
+    dialogueObject: {fileID: 11400000, guid: 39139012633164eeb987050efdc84027, type: 2}

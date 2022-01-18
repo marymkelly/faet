@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063a9a86cc9784294ab9defe2d7a8c00, type: 3}
+  m_Name: Rune
+  m_EditorClassIdentifier: 
+  dialogue:
+  - I have something for you...
+  - This is rune of the Old world said to behold legendary power.
+  - It was broken may years ago to keep the realms safe.
+  - As a fragment Keeper, it has been my duty to keep this piece safe.
+  - 'But I have been shown it is you who needs to keep this now. '
+  responses:
+  - responseText: What do you mean, shown?
+    dialogueObject: {fileID: 11400000, guid: 017be5272d4634c20b48b0d3dd6ec062, type: 2}
+    actionResponse: 
+  - responseText: Me? Are you sure?
+    dialogueObject: {fileID: 11400000, guid: 017be5272d4634c20b48b0d3dd6ec062, type: 2}
+    actionResponse: 

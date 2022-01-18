@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063a9a86cc9784294ab9defe2d7a8c00, type: 3}
+  m_Name: Hello
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Hiya! How can I help?
+  responses:
+  - responseText: Is the Druid always so strange?
+    dialogueObject: {fileID: 11400000, guid: bb60028c98bf64f029614354f4dc3a60, type: 2}
+    actionResponse: 
+  - responseText: Do you know what fragment keepers are?
+    dialogueObject: {fileID: 11400000, guid: 3195e877308eb4bef990e21ca17d9ef5, type: 2}
+    actionResponse: 
