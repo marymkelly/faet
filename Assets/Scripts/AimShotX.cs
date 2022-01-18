@@ -15,9 +15,9 @@ public class AimShotX : MonoBehaviour
     private float circleWidth;
     private float radius;
     
-    [HideInInspector]
+    // [HideInInspector]
     public bool aimOn = false;
-    int holdCount = 0;
+    private int holdCount = 0;
 
     private float counter = 0.0f;
     private float animationTime = 150f;
@@ -50,7 +50,7 @@ public class AimShotX : MonoBehaviour
                 aimDot.gameObject.SetActive(false);
                 circlePath.gameObject.SetActive(false);
                 crossHair.gameObject.SetActive(false);
-                aimOn = false;
+                // aimOn = false;
             }
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Interactions>().FreePlayer(false);
     

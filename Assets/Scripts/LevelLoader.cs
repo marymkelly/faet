@@ -37,7 +37,7 @@ public class LevelLoader : MonoBehaviour
 
     // public delegate void EventHandler(VideoPlayer video);
     void EndReached(VideoPlayer video) {
-        Debug.Log("End of video Reached!");
+        // Debug.Log("End of video Reached!");
         // LoadNextLevel();
         if(SceneManager.GetActiveScene().name == "Outro_Scene") {
             // StartLoadingLevel(10);
@@ -78,7 +78,7 @@ public class LevelLoader : MonoBehaviour
             slider.value = progress;
 
             yield return null;
-            Debug.Log("async start transitiontrigger");
+            // Debug.Log("async start transitiontrigger");
             transition.SetTrigger("Start");
         }
     }

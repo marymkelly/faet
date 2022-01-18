@@ -13,7 +13,7 @@ public class ActionsManager : MonoBehaviour
         // Debug.Log($"Action Exists? :  {Array.Exists(Actions, action => action.name == name)}");
         // Debug.Log($"Action Index Found :  {Array.FindIndex(Actions, action => action.name == name)}");
         if(Array.Exists(Actions, action => action.name == name)){
-            Debug.Log("Action INVOKED " + name);
+            // Debug.Log("Action INVOKED " + name);
             Actions[Array.FindIndex(Actions, action => action.name == name)].ActionEvent.Invoke();
         } else {
             Debug.Log("Action NOT FOUND");

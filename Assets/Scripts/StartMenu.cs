@@ -7,17 +7,15 @@ using UnityEngine.UI;
 public class StartMenu : MonoBehaviour
 {   
     public GameObject startButton;
-    // public GameObject loadButton;
     public GameObject returningBtns;
-
+    public GameObject quitButton;
 
     void Start() {
         startButton.SetActive(!GameData.existingData);
         returningBtns.SetActive(GameData.existingData);
-    }
 
-    void Update()
-    {
-        // loadButton.GetComponent<Button>().interactable = GameData.existingData;
+        if(Application.platform == RuntimePlatform.WebGLPlayer) {
+            quitButton.SetActive(false);
+        }
     }
 }

@@ -1866,6 +1866,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2075633508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2583771087882384224, guid: ed774447f76204d41ba9c4b24af889a3, type: 3}
+  m_PrefabInstance: {fileID: 2583771086067888839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2103034820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2150,6 +2155,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2583771087983275543, guid: ed774447f76204d41ba9c4b24af889a3, type: 3}
+      propertyPath: quitButton
+      value: 
+      objectReference: {fileID: 2075633508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed774447f76204d41ba9c4b24af889a3, type: 3}
 --- !u!114 &2583771086067888840 stripped

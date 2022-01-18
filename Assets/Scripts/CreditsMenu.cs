@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreditsMenu : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class CreditsMenu : MonoBehaviour
     {    
         yield return new WaitForSeconds(32);
         
-        optCanvas.SetActive(true);
+        if(Application.platform == RuntimePlatform.WebGLPlayer) {
+            SceneManager.LoadScene("Start_Screen");
+        } else {
+            optCanvas.SetActive(true);
+        }
     }
 }

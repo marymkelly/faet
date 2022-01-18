@@ -52,7 +52,7 @@ public class LevelEntry : MonoBehaviour
         {
             if(playerFragments >= minFragments) {
                 //  = Color.Lerp(Color.white, Color.black, Time.time);
-                Debug.Log("frags enough");
+                // Debug.Log("frags enough");
                 canEnter = true;
 
             }

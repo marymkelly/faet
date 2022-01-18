@@ -189,6 +189,7 @@ public class Player_Interactions : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision) {
         if(collision.name == "Enter Hollow" && Input.GetKeyDown(KeyCode.E)) {
+            GameObject.Find("GameData").GetComponent<GameData>().Save();
             SceneManager.LoadScene(4);
         }
     }
@@ -341,7 +342,9 @@ public class Player_Interactions : MonoBehaviour
         canvas.transform.Find("Fragments").gameObject.SetActive(true);
 
         instruction.GetComponent<Text>().text = "Press <color=#00dba0>Enter/Return</color> to continue";
-        yield return new WaitUntil(()  => Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0));
+        // yield return new WaitUntil(()  => Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0));
+        yield return null;
+        yield return new WaitUntil(()  => Input.GetButtonDown("Submit"));
         canvas.transform.Find("Fragments").gameObject.SetActive(false);
         instruction.GetComponent<Text>().text = "";
 

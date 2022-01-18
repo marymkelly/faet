@@ -46,7 +46,7 @@ public class Enemy_Paused : MonoBehaviour
 
     void FixedUpdate() {
         if(canPatrol) {
-            Debug.Log("patrol fixed in paused, speed " + speed);
+            // Debug.Log("patrol fixed in paused, speed " + speed);
             StartPatrol();
         }
     }

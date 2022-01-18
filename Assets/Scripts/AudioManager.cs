@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
             if(!theme.source.isPlaying) {
                 currentTheme.Stop();
                 currentTheme = theme.source;
-                Debug.Log("Playing current theme: " + theme.name);
+                // Debug.Log("Playing current theme: " + theme.name);
                 currentTheme.Play();  
                 AudioIsPlaying = true;
             }

@@ -105,7 +105,7 @@ public class Boss_Two : MonoBehaviour
                 }
  
                 if(player.position.x >= GameObject.Find("PlayerStop").transform.position.x - (player.transform.GetComponent<SpriteRenderer>().bounds.size.x / 2)) {
-                    Debug.Log("hit player stop");
+                    // Debug.Log("hit player stop");
                     zap.SetActive(false);
                 }
 
@@ -159,7 +159,7 @@ public class Boss_Two : MonoBehaviour
             TakeDamage(5);
             StartCoroutine(BreakCount(collision));
         } else if (collision.name == "Projectile(Clone)") {
-            Debug.Log("Collision Damage " + collision.GetComponent<Projectile>().GetDamage());
+            // Debug.Log("Collision Damage " + collision.GetComponent<Projectile>().GetDamage());
             int damage = (int)collision.GetComponent<Projectile>().GetDamage();
 
             if(!inIntro) {
@@ -201,9 +201,9 @@ public class Boss_Two : MonoBehaviour
     }
 
     IEnumerator BreakCount(Collider2D collision) {
-        Debug.Log("Break count started, bosshit   " + collision.GetComponent<Vine>().bossHit);
+        // Debug.Log("Break count started, bosshit   " + collision.GetComponent<Vine>().bossHit);
         yield return new WaitUntil(() => !collision.GetComponent<Vine>().bossHit);
-        Debug.Log("Bosshit over"); 
+        // Debug.Log("Bosshit over"); 
         GetComponent<Animator>().SetBool("isBound", true);
         yield return new WaitForSeconds(2); 
         GetComponent<Animator>().ResetTrigger("Grab");

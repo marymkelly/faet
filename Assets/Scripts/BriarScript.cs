@@ -50,7 +50,7 @@ public class BriarScript : MonoBehaviour
     {
         health -= d;
 
-        Debug.Log("Briar Damage " + d + " Health left " + health);
+        // Debug.Log("Briar Damage " + d + " Health left " + health);
 
         if (health <= 0)
         {

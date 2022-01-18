@@ -28,6 +28,7 @@ public class PlayerShooter : MonoBehaviour {
 
     public bool casting = false;
     private bool lastFacingRight;
+    private bool usingAim;
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -37,6 +38,7 @@ public class PlayerShooter : MonoBehaviour {
         castPower = player.GetComponent<Player_Magic_Update>().magicPower; 
         currentMagic = playerMagic.GetCurrentMagic();
         castTransform = player.transform.Find("PewPew");
+        usingAim = player.GetComponent<AimShotX>().aimOn;
 
         cam = Camera.main;
         mousePosition = GetWorldMousePos();
@@ -53,10 +55,12 @@ public class PlayerShooter : MonoBehaviour {
         isClimbing =  player.GetComponent<Animator>().GetBool("IsClimbing");
         currentMagic = playerMagic.GetCurrentMagic();
         castPower = player.GetComponent<Player_Magic_Update>().magicPower;
+        usingAim = player.GetComponent<AimShotX>().aimOn;
+        casting = usingAim;
 
         if(lastFacingRight != player.GetComponent<Player_Move_Update>().PlayerLastMovedRight()) {
             lastFacingRight = player.GetComponent<Player_Move_Update>().PlayerLastMovedRight();
-            Debug.Log("Last facing RIGHT " +lastFacingRight);
+            // Debug.Log("Last facing RIGHT " +lastFacingRight);
         }
         
 
@@ -68,8 +72,6 @@ public class PlayerShooter : MonoBehaviour {
 
             //keyboard controls
             // ControlLastShot();
-            bool usingAim = player.GetComponent<AimShotX>().aimOn;
-            casting = usingAim;
 
             if (GameObject.FindGameObjectsWithTag("Attack").Length < MaxActiveShots && currentMagic >= castPower){
             
@@ -142,16 +144,16 @@ public class PlayerShooter : MonoBehaviour {
         // shot.GetComponent<Projectile>().Launch(playerSpeed, facingRight);
         // lastShot = shot;
 
-        if(aiming){
-            projectileTransform = shot.GetComponent<Projectile>().transform;
-            Vector3 castToPosition = player.GetComponent<AimShotX>().GetAimWorldPoint();
+        // if(aiming){
+        //     projectileTransform = shot.GetComponent<Projectile>().transform;
+        //     Vector3 castToPosition = player.GetComponent<AimShotX>().GetAimWorldPoint();
 
-            Vector3 castDirection = (castToPosition - projectileTransform.position).normalized;  //vector math
-            float angle = Mathf.Atan2(castDirection.y, castDirection.x) * Mathf.Rad2Deg;
-            this.transform.eulerAngles  = new Vector3(0, 0, angle); 
+        //     Vector3 castDirection = (castToPosition - projectileTransform.position).normalized;  //vector math
+        //     float angle = Mathf.Atan2(castDirection.y, castDirection.x) * Mathf.Rad2Deg;
+        //     this.transform.eulerAngles  = new Vector3(0, 0, angle); 
 
-            shot.GetComponent<Projectile>().Setup(castDirection, this.transform.eulerAngles);
-        }
+        //     shot.GetComponent<Projectile>().Setup(castDirection, this.transform.eulerAngles);
+        // }
 
         lastShot = shot;
         playerMagic.UseMagic(10);

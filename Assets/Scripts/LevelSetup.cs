@@ -17,18 +17,18 @@ public class LevelSetup : MonoBehaviour
     private GameObject[] hazards;
     private GameObject[] enemies;
 
-    private GameObject extensionPlaform;
+    private GameObject extensionPlatform;
 
     void Awake() {
         sceneName = SceneManager.GetActiveScene().name;
 
         if(sceneName == "Level_One" || sceneName == "Level_One_Second") {
-            extensionPlaform = GameObject.Find("Extension").gameObject;
+            extensionPlatform = GameObject.Find("Extension").gameObject;
             dynamicBg = GameObject.Find("Background Layers").gameObject;
             dynamicBg.SetActive(false);
-            extensionPlaform.SetActive(false);
+            extensionPlatform.SetActive(false);
 
-        }  else if(sceneName == "Level_Two" || sceneName == "Level_Two_Second" || sceneName == "Level_Two_P1") {
+        }else if(sceneName == "Level_Two" || sceneName == "Level_Two_Second" || sceneName == "Level_Two_P1") {
 
         } else if(sceneName == "Boss_One" || sceneName == "Boss_Two" || sceneName == "Boss_Two_Second") {
 
@@ -86,10 +86,12 @@ public class LevelSetup : MonoBehaviour
             }
 
             if(player.GetComponent<Player_Interactions>().defeatedBossOne) {
+                GameObject.Find("Main Camera").GetComponent<Camera_Controls>().xMax = 47.5f;
                 GameObject.Find("NPC").SetActive(false);
                 GameObject.Find("BossLevel").SetActive(false);
+                GameObject.Find("Gameplay").GetComponent<Transform>().Find("Death Rightmost").GetComponent<Transform>().gameObject.SetActive(false);
                 dynamicBg.SetActive(true);
-                extensionPlaform.SetActive(true);
+                extensionPlatform.SetActive(true);
 
                 foreach (GameObject hazard in hazards) {
                     hazard.SetActive(false);
@@ -115,7 +117,7 @@ public class LevelSetup : MonoBehaviour
             }
 
             if(fadeWoods && t > 0f) {    
-                Debug.Log("FakeWoods True! " + t);
+                // Debug.Log("FakeWoods True! " + t);
 
                 woods[0].color = new Color(woods[0].color[0], woods[0].color[1], woods[0].color[2], t);
                 woods[1].color = new Color(woods[1].color[0], woods[1].color[1], woods[1].color[2], t);

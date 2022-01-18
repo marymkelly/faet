@@ -70,7 +70,7 @@ public class Player_Leaf_Update : MonoBehaviour {
     }
 
     void Dead() {
-        Debug.Log("Dead called " + this + " + health " + currentHealth);
+        // Debug.Log("Dead called " + this + " + health " + currentHealth);
         CancelCoroutines();
         currentHealth = 0;
         // this.gameObject.SetActive(false);

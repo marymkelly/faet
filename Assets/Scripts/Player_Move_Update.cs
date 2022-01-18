@@ -103,7 +103,7 @@ public class Player_Move_Update : MonoBehaviour {
                 float velDelta = maxVelY / ((9.81f * originalGravityScale) * rb.mass); //change in velocity
 
                 if ((velDelta + 80) <= -100) {
-                    Debug.Log("FALL DAMAGE " + velDelta);
+                    // Debug.Log("FALL DAMAGE " + velDelta);
                     FallDamage(velDelta);
                     FindObjectOfType<AudioManager>().Play("Fell");
                 }
@@ -232,7 +232,7 @@ public class Player_Move_Update : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.CompareTag("Save")){
-            Debug.Log("SAVING");    
+            // Debug.Log("SAVING");    
             GameObject.Find("GameData").GetComponent<GameData>().Save();
         }
 

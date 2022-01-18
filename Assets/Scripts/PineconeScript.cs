@@ -42,7 +42,7 @@ public class PineconeScript : MonoBehaviour
     {
         health -= d;
 
-        Debug.Log("Pinecone Damage " + d + " Health left " + health);
+        // Debug.Log("Pinecone Damage " + d + " Health left " + health);
 
         if (health <= 0)
         {

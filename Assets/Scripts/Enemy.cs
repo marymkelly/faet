@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         if(!(patrol.pointA && patrol.pointB)) {
             canPatrol = false;
             patrol.enabled = false;
-            Debug.Log("NO PATROL POINTS " + canPatrol);
+            // Debug.Log("NO PATROL POINTS " + canPatrol);
         }
 
         // if(patrol.pointA && patrol.pointB) {
@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
                         StartCoroutine("ReturnToPatrol");
                     }
                 } else {
-                    Debug.Log("moving to return position");
+                    // Debug.Log("moving to return position");
                     chaseSpeed = originalChaseSpeed;
 
                     Vector3 direction = originalPosition - transform.position;
@@ -126,11 +126,11 @@ public class Enemy : MonoBehaviour
                     rb.isKinematic = false;
                 }
 
-                Debug.Log("enemy is chasing");
+                // Debug.Log("enemy is chasing");
 
                 // if(bounceVel == Vector2.zero) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
                 if(bounceTarget == Vector2.zero) {
-                    Debug.Log("bounceTarg 0 ");
+                    // Debug.Log("bounceTarg 0 ");
                     Vector3 direction = player.position - transform.position;
                     direction.Normalize();
                     moveTo = direction;
@@ -173,7 +173,7 @@ public class Enemy : MonoBehaviour
     }
 
     void moveEnemy(Vector2 direction){ //chase
-    Debug.Log("MOVE ENEMY");
+    // Debug.Log("MOVE ENEMY");
         GetComponent<SpriteRenderer>().flipX = (direction.x > 0) ? true : false;
         rb.MovePosition((Vector2)transform.position + (direction * chaseSpeed * Time.fixedDeltaTime));
         rb.velocity = new Vector2(direction.x, direction.y) * chaseSpeed;

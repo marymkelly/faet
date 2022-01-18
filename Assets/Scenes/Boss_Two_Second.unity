@@ -895,7 +895,7 @@ MonoBehaviour:
   elevator: {fileID: 1318739072}
   elevatorPoint: {fileID: 1635857500}
   symbol: {fileID: 179356194}
-  symbolColor: {r: 0.3529412, g: 1, b: 0.9921569, a: 0}
+  symbolColor: {r: 0.3529412, g: 1, b: 0.9921569, a: 1}
 --- !u!1001 &179356192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5384,7 +5384,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2107329497
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.63372195, g: 0.9528302, b: 0.845683, a: 1}
   m_FlipX: 0

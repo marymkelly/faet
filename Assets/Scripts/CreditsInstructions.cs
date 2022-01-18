@@ -23,7 +23,7 @@ public class CreditsInstructions : MonoBehaviour
     void Update()
     {
         if(Input.GetAxis("Horizontal") > 0.2f) {
-            Debug.Log("Movement Registered");
+            // Debug.Log("Movement Registered");
             hasMoved = true;
 
             if(hintDisplayed || (hasMoved && !isMoving)) {

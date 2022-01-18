@@ -53,6 +53,7 @@ public class GameData : MonoBehaviour
 
     void Awake() {
         // Debug.Log(Application.persistentDataPath);
+
         // Debug.Log("GAME DATA AWAKE " + SceneManager.GetActiveScene().name);
         if(control == null) {
             control = this;
@@ -62,6 +63,8 @@ public class GameData : MonoBehaviour
         }
 
         // Debug.Log("APP STREAMING PATH " + Application.streamingAssetsPath);
+        // Debug.Log("APPLICATION PLATFORM " + Application.platform);
+        // if(Application.platform == "WebGLPlayer")
 
         if(SceneManager.GetActiveScene().name != "Credits_Screen"){
             if(SceneManager.GetActiveScene().name == "Start_Screen"){
@@ -91,7 +94,7 @@ public class GameData : MonoBehaviour
         }
 
         if(!calledLoad) {
-            // Debug.Log("saved scene name = " + sceneName); //prev scene
+            Debug.Log("saved scene name = " + sceneName); //prev scene
             if(scene.name == "Level_One_Second") { //new scene
                 if(sceneName == "Level_Two") { 
                     // Debug.Log("From Level 2!");

@@ -53,9 +53,11 @@ public class Boss_One : MonoBehaviour {
     private Vector3 cameraTarget;
     public bool cameraAdjusting = false;
     private Vector3 velocity = Vector3.zero;
+    private GameObject levelLoader;
 
     void Start() {
         cameraMain = GameObject.Find("Main Camera").transform;
+        levelLoader = GameObject.Find("LevelLoader").gameObject;
 
         currentHealth = maxHealth;
         bossBar.SetMaxHealth(maxHealth);
@@ -196,16 +198,18 @@ public class Boss_One : MonoBehaviour {
 
         if(currentHealth <= 0) {
             if(!player.GetComponent<Player_Interactions>().defeatedBossOne) {
+                player.GetComponent<Player_Interactions>().defeatedBossOne = true;
+            }
+
+                StartCoroutine("DefeatBoss");
                 GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (GameObject enemy in enemies) {
                     Destroy(enemy);
                 }
 
-                player.GetComponent<Player_Interactions>().defeatedBossOne = true;
                 GameObject.Find("Boss Canvas").gameObject.SetActive(false);
                 GameObject.Find("Caster").gameObject.SetActive(false);
-                StartCoroutine("DefeatBoss");
-            }
+
         } else {
             gameObject.GetComponentInParent<Flicker_Color>().Flicker();
         }
@@ -215,7 +219,7 @@ public class Boss_One : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.name == "Projectile(Clone)")
         {
-            Debug.Log("Collision Damage " + collision.GetComponent<Projectile>().GetDamage());
+            // Debug.Log("Collision Damage " + collision.GetComponent<Projectile>().GetDamage());
             int damage = (int)collision.GetComponent<Projectile>().GetDamage();
 
             TakeDamage(damage);
@@ -278,8 +282,14 @@ public class Boss_One : MonoBehaviour {
             StartCoroutine(AdjustCamera());
         }
         yield return new WaitForSeconds(.8f);
-        fragThree.transform.position = this.transform.position;
-        fragThree.SetActive(true);
-        Destroy(gameObject);
+        if(player.GetComponent<Player_Interactions>().fragments >= 3) {
+            GameObject.Find("LevelLoader").GetComponent<LevelLoader>().StartLoadingLevel(8);
+            Destroy(gameObject);
+            
+        } else {
+            fragThree.transform.position = this.transform.position;
+            fragThree.SetActive(true);
+            Destroy(gameObject);
+        }
     }      
 }

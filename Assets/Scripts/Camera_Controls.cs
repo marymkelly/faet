@@ -51,6 +51,22 @@ public class Camera_Controls : MonoBehaviour
         }
 
         if(boss) {
+            // if(player.transform.position.x <= -4) {
+            //     xOffset = 2;
+            // } 
+            // else if(player.transform.position.x > -4 && player.transform.position.x < -2) {
+            //     xOffset = 2;
+            // }
+            //  else {
+            //     xOffset = 4;
+            // }
+
+            if(((player.transform.position.x - boss.transform.position.x) > 2) && (boss.transform.position.x < player.transform.position.x) && player.transform.position.x > 0) {
+                xOffset = Mathf.Lerp(-4, 0, (-1 * player.transform.position.x));
+            } else {
+                xOffset = Mathf.Lerp(4, -2, (-1 * player.transform.position.x));
+            }
+
             if(!boss.GetComponent<Boss_One>().cameraAdjusting) {
                 position.x = Mathf.Lerp(transform.position.x, Mathf.Clamp(player.transform.position.x + xOffset, xMin, xMax), interpolation);
                 position.y = Mathf.Lerp(transform.position.y, Mathf.Clamp(player.transform.position.y + yOffset, yMin, yMax), interpolation);

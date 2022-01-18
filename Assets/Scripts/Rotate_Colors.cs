@@ -34,7 +34,7 @@ public class Rotate_Colors : MonoBehaviour
         GetComponent<SpriteRenderer>().color = currentColorVector;
 
         if(currentColorVector.Equals(rgba[k])) {
-            Debug.Log("Color Matched!");
+            // Debug.Log("Color Matched!");
             i++;
 
             if(i == (colors.Length)) {

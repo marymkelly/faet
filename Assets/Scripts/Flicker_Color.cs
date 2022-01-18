@@ -24,7 +24,9 @@ public class Flicker_Color : MonoBehaviour
         // }
         // if(GetComponentInParent<PineconeScript>()){
         if(TryGetComponent(out PineconeScript cone)){
-            originalColor = cone.entryColor;
+            if(GameObject.Find("Player").GetComponent<Player_Interactions>().fragments > 0) {
+                originalColor = cone.entryColor;
+            }
         }
 
         if(flickerCounter < flickerLength) {
